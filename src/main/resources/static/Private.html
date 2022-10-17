@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <title>ProyectoGrupo7-G26</title>
+</head>
+
+<body>
+
+    <!- ORTHESIS TABLE ->
+
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="crearOrthesis()">
+                    <div>
+                        <label for="orthesisId">ID</label>
+                        <input type="number" name="orthesisId" id="orthesisId">
+                    </div>
+                    <div>
+                        <label for="orthesisBrand">BRAND</label>
+                        <input type="text" name="orthesisBrand" id="orthesisBrand" maxlength="20">
+                    </div>
+                    <div>
+                        <label for="orthesisModel">MODEL</label>
+                        <input type="number" name="orthesisModel" id="orthesisModel">
+                    </div>
+                    <div>
+                        <label for="orthesisCategory_Id">CATEGORY_ID</label>
+                        <input type="number" name="orthesisCategory_Id" id="orthesisCategory_Id">
+                    </div>
+                    <div>
+                        <label for="orthesisName">NAME</label>
+                        <input type="text" name="orthesisName" id="orthesisName" maxlength="50">
+                    </div>
+                    <div>
+                        <input type="submit" value="Create Orthesis">
+                    </div>
+                </form>
+                <button onclick="editarOrthesis()">Edit Orthesis</button>
+            <td>
+                <table id="listaOrthesis">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>BRAND</th>
+                            <th>MODEL</th>
+                            <th>CATEGORY_ID</th>
+                            <th>NAME</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+            </td>
+        </tr>
+    </table>
+
+    <!- CLIENT TABLE ->
+
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="crearClient()">
+                    <div>
+                        <label for="clientId">ID</label>
+                        <input type="number" name="clientId" id="clientId">
+                    </div>
+                    <div>
+                        <label for="clientName">NAME</label>
+                        <input type="text" name="clientName" id="clientName" maxlength="50">
+                    </div>
+                    <div>
+                        <label for="clientEmail">EMAIL</label>
+                        <input type="text" name="clientEmail" id="clientEmail" maxlength="30">
+                    </div>
+                    <div>
+                        <label for="clientAge">AGE</label>
+                        <input type="number" name="clientAge" id="clientAge" maxlength="3">
+                    </div>
+                    <div>
+                        <input type="submit" value="Create Client">
+                    </div>
+                </form>
+                <button onclick="editarClient()">Edit Client</button>
+            <td>
+                <table id="listaClient">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>AGE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+            </td>
+        </tr>
+    </table>
+
+    <!- MESSAGE TABLE ->
+
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="crearMessage()">
+                    <div>
+                        <label for="messageId">ID</label>
+                        <input type="number" name="messageId" id="messageId">
+                    </div>
+                    <div>
+                        <label for="messageText">MESSAGETEXT</label>
+                        <input type="text" name="messageText" id="messageText" maxlength="100">
+                    </div>
+                    <div>
+                        <input type="submit" value="Create Message">
+                    </div>
+                </form>
+                <button onclick="editarMessage()">Edit Message</button>
+            <td>
+                <table id="listaMessage">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>MESSAGETEXT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
