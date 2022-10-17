@@ -17,11 +17,12 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 @Entity
 @Table(name = "ortopedic")
-public class Ortopedic implements Serializable {
+public class Ortopedic implements Serializable{
 
-    // ***** ATRIBUTOS *****
+    //***** ATRIBUTOS *****
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -38,12 +39,12 @@ public class Ortopedic implements Serializable {
     @Column(name = "description")
     private String description;
 
-    // ***** RELACIONES *****
-    // Relación uno a uno. Una Ortopedic tiene un Category relacionada.
+    //***** RELACIONES *****
+    //Relación uno a uno. Una Farm tiene un Category relacionada.
     @ManyToOne(optional = true)
     @JsonIgnoreProperties(value = {"ortopedics"})
-	    @JoinColumn(name = "category_id")
-	    private Category category;
+	@JoinColumn(name = "category_id")
+	private Category category;
 
     @OneToMany(mappedBy = "ortopedic", cascade = CascadeType.ALL)
     @JsonIgnoreProperties(value = {"client", "ortopedic"})
@@ -52,21 +53,14 @@ public class Ortopedic implements Serializable {
     @OneToMany(mappedBy = "ortopedic", cascade = CascadeType.ALL)
     private Set<Reservation> reservations = new HashSet<>();
 
-    // ***** METODOS *****
+
+    //***** METODOS *****
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getBrand() {
@@ -77,12 +71,13 @@ public class Ortopedic implements Serializable {
         this.brand = brand;
     }
 
-    public Integer getYear() {
-        return year;
+
+    public String getName() {
+        return name;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -117,4 +112,13 @@ public class Ortopedic implements Serializable {
         this.messages = messages;
     }
 
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    
 }

@@ -17,9 +17,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "client")
-public class Client implements Serializable {
+public class Client implements Serializable{
 
-    // ***** ATRIBUTOS *****
+    //***** ATRIBUTOS *****
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
@@ -35,23 +35,27 @@ public class Client implements Serializable {
 
     @Column(name = "age")
     private Integer age;
-
-    // ***** RELACIONES *****:
+    
+    //***** RELACIONES *****:
     // Un empleado puede tener muchas Reservation y Messages.
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private Set<Message> messages = new HashSet<>();
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     @JsonIgnoreProperties(value = {"client"})
-    private Set<Reservation> reservations = new HashSet<>();  
+    private Set<Reservation> reservations = new HashSet<>();
 
-    // ***** METODOS *****
-    public Integer getIdClient() {
-        return idClient;
+    
+
+    //***** METODOS *****
+ 
+
+    public String getName() {
+        return name;
     }
 
-    public void setIdClient(Integer idClient) {
-        this.idClient = idClient;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -68,14 +72,6 @@ public class Client implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-    
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Integer getAge() {
@@ -102,4 +98,13 @@ public class Client implements Serializable {
         this.messages = messages;
     }
 
+    public Integer getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(Integer idClient) {
+        this.idClient = idClient;
+    }
+    
+    
 }
