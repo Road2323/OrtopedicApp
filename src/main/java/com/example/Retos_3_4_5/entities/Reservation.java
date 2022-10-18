@@ -54,6 +54,7 @@ public class Reservation implements Serializable {
     }
 
     // ***** METODOS *****
+    
     public Integer getIdReservation() {
         return idReservation;
     }
@@ -78,12 +79,12 @@ public class Reservation implements Serializable {
         this.devolutionDate = devolutionDate;
     }
 
-    public Client getClient() {
-        return client;
+    public String getStatus() {
+        return status;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Ortopedic getOrtopedic() {
@@ -94,12 +95,12 @@ public class Reservation implements Serializable {
         this.ortopedic = ortopedic;
     }
 
-    public String getStatus() {
-        return status;
+    public Client getClient() {
+        return client;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public String getScore() {
@@ -108,6 +109,7 @@ public class Reservation implements Serializable {
 
     public void setScore(String score) {
         this.score = score;
-    }    
+    }
 
+    
 }

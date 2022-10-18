@@ -36,7 +36,6 @@ public class Message implements Serializable {
     @JsonIgnoreProperties(value = {"messages", "reservations"})
 	    @JoinColumn(name = "client_id")
 	    private Client client;
-
     // ***** METODOS *****
     public Integer getIdMessage() {
         return idMessage;
@@ -54,6 +53,14 @@ public class Message implements Serializable {
         this.messageText = messageText;
     }
 
+    public Ortopedic getOrtopedic() {
+        return ortopedic;
+    }
+
+    public void setOrtopedic(Ortopedic ortopedic) {
+        this.ortopedic = ortopedic;
+    }
+
     public Client getClient() {
         return client;
     }
@@ -62,12 +69,5 @@ public class Message implements Serializable {
         this.client = client;
     }
 
-    public Ortopedic getOrtopedic() {
-        return ortopedic;
-    }
-
-    public void setOrtopedic(Ortopedic ortopedic) {
-        this.ortopedic = ortopedic;
-    }    
-
 }
+    

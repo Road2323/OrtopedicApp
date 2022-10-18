@@ -27,7 +27,7 @@ public class ReportClient{
         Collections.sort(arr, new Comparator<Reservation>() {
             @Override
             public int compare(Reservation u1, Reservation u2) {
-              return u2.getIdReservation().compareTo(u1.getIdReservation());
+              return u1.getIdReservation().compareTo(u2.getIdReservation());
             }
           });
         
@@ -39,13 +39,18 @@ public class ReportClient{
     public int getTotal() {
         return total;
     }
+
     public void setTotal(int total) {
         this.total = total;
     }
+
     public Client getClient() {
         return client;
     }
+
     public void setClient(Client client) {
         this.client = client;
     }
+
+    
 }

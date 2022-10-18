@@ -33,8 +33,7 @@ public class Category implements Serializable {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("category")
     private Set<Ortopedic> ortopedics = new HashSet<>();
-
-    // ***** METODOS *****
+// ***** METODOS *****
     public Integer getId() {
         return id;
     }
@@ -66,5 +65,8 @@ public class Category implements Serializable {
     public void setOrtopedics(Set<Ortopedic> ortopedics) {
         this.ortopedics = ortopedics;
     }
+
+    
+   
 
 }

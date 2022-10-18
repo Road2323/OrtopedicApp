@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Retos_3_4_5.entities.Client;
 import com.example.Retos_3_4_5.entities.ReportClient;
 import com.example.Retos_3_4_5.entities.Reservation;
 import com.example.Retos_3_4_5.services.ReservationService;
